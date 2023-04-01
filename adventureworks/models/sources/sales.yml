@@ -1,0 +1,811 @@
+version: 2
+sources:
+  - name: sales
+    tables:
+      - name: countryregioncurrency
+        description: ''
+        tests: null
+        columns:
+          - name: countryregioncode
+            description: ''
+            tests: null
+          - name: currencycode
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+      - name: creditcard
+        description: ''
+        tests: null
+        columns:
+          - name: cardnumber
+            description: ''
+            tests: null
+          - name: cardtype
+            description: ''
+            tests: null
+          - name: creditcardid
+            description: ''
+            tests: null
+          - name: expmonth
+            description: ''
+            tests: null
+          - name: expyear
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+      - name: currency
+        description: ''
+        tests: null
+        columns:
+          - name: currencycode
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+      - name: currencyrate
+        description: ''
+        tests: null
+        columns:
+          - name: averagerate
+            description: ''
+            tests: null
+          - name: currencyratedate
+            description: ''
+            tests: null
+          - name: currencyrateid
+            description: ''
+            tests: null
+          - name: endofdayrate
+            description: ''
+            tests: null
+          - name: fromcurrencycode
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: tocurrencycode
+            description: ''
+            tests: null
+      - name: customer
+        description: ''
+        tests: null
+        columns:
+          - name: customerid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: personid
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: storeid
+            description: ''
+            tests: null
+          - name: territoryid
+            description: ''
+            tests: null
+      - name: personcreditcard
+        description: ''
+        tests: null
+        columns:
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: creditcardid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+      - name: salesorderdetail
+        description: ''
+        tests: null
+        columns:
+          - name: carriertrackingnumber
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: orderqty
+            description: ''
+            tests: null
+          - name: productid
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: salesorderdetailid
+            description: ''
+            tests: null
+          - name: salesorderid
+            description: ''
+            tests: null
+          - name: specialofferid
+            description: ''
+            tests: null
+          - name: unitprice
+            description: ''
+            tests: null
+          - name: unitpricediscount
+            description: ''
+            tests: null
+      - name: salesorderheader
+        description: ''
+        tests: null
+        columns:
+          - name: accountnumber
+            description: ''
+            tests: null
+          - name: billtoaddressid
+            description: ''
+            tests: null
+          - name: comment
+            description: ''
+            tests: null
+          - name: creditcardapprovalcode
+            description: ''
+            tests: null
+          - name: creditcardid
+            description: ''
+            tests: null
+          - name: currencyrateid
+            description: ''
+            tests: null
+          - name: customerid
+            description: ''
+            tests: null
+          - name: duedate
+            description: ''
+            tests: null
+          - name: freight
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: onlineorderflag
+            description: ''
+            tests: null
+          - name: orderdate
+            description: ''
+            tests: null
+          - name: purchaseordernumber
+            description: ''
+            tests: null
+          - name: revisionnumber
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: salesorderid
+            description: ''
+            tests: null
+          - name: salespersonid
+            description: ''
+            tests: null
+          - name: shipdate
+            description: ''
+            tests: null
+          - name: shipmethodid
+            description: ''
+            tests: null
+          - name: shiptoaddressid
+            description: ''
+            tests: null
+          - name: status
+            description: ''
+            tests: null
+          - name: subtotal
+            description: ''
+            tests: null
+          - name: taxamt
+            description: ''
+            tests: null
+          - name: territoryid
+            description: ''
+            tests: null
+          - name: totaldue
+            description: ''
+            tests: null
+      - name: salesorderheadersalesreason
+        description: ''
+        tests: null
+        columns:
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: salesorderid
+            description: ''
+            tests: null
+          - name: salesreasonid
+            description: ''
+            tests: null
+      - name: salesperson
+        description: ''
+        tests: null
+        columns:
+          - name: bonus
+            description: ''
+            tests: null
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: commissionpct
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: saleslastyear
+            description: ''
+            tests: null
+          - name: salesquota
+            description: ''
+            tests: null
+          - name: salesytd
+            description: ''
+            tests: null
+          - name: territoryid
+            description: ''
+            tests: null
+      - name: salespersonquotahistory
+        description: ''
+        tests: null
+        columns:
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: quotadate
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: salesquota
+            description: ''
+            tests: null
+      - name: salesreason
+        description: ''
+        tests: null
+        columns:
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: reasontype
+            description: ''
+            tests: null
+          - name: salesreasonid
+            description: ''
+            tests: null
+      - name: salestaxrate
+        description: ''
+        tests: null
+        columns:
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: salestaxrateid
+            description: ''
+            tests: null
+          - name: stateprovinceid
+            description: ''
+            tests: null
+          - name: taxrate
+            description: ''
+            tests: null
+          - name: taxtype
+            description: ''
+            tests: null
+      - name: salesterritory
+        description: ''
+        tests: null
+        columns:
+          - name: costlastyear
+            description: ''
+            tests: null
+          - name: costytd
+            description: ''
+            tests: null
+          - name: countryregioncode
+            description: ''
+            tests: null
+          - name: group
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: saleslastyear
+            description: ''
+            tests: null
+          - name: salesytd
+            description: ''
+            tests: null
+          - name: territoryid
+            description: ''
+            tests: null
+      - name: salesterritoryhistory
+        description: ''
+        tests: null
+        columns:
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: enddate
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: startdate
+            description: ''
+            tests: null
+          - name: territoryid
+            description: ''
+            tests: null
+      - name: shoppingcartitem
+        description: ''
+        tests: null
+        columns:
+          - name: datecreated
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: productid
+            description: ''
+            tests: null
+          - name: quantity
+            description: ''
+            tests: null
+          - name: shoppingcartid
+            description: ''
+            tests: null
+          - name: shoppingcartitemid
+            description: ''
+            tests: null
+      - name: specialoffer
+        description: ''
+        tests: null
+        columns:
+          - name: category
+            description: ''
+            tests: null
+          - name: description
+            description: ''
+            tests: null
+          - name: discountpct
+            description: ''
+            tests: null
+          - name: enddate
+            description: ''
+            tests: null
+          - name: maxqty
+            description: ''
+            tests: null
+          - name: minqty
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: specialofferid
+            description: ''
+            tests: null
+          - name: startdate
+            description: ''
+            tests: null
+          - name: type
+            description: ''
+            tests: null
+      - name: specialofferproduct
+        description: ''
+        tests: null
+        columns:
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: productid
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: specialofferid
+            description: ''
+            tests: null
+      - name: store
+        description: ''
+        tests: null
+        columns:
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: demographics
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: salespersonid
+            description: ''
+            tests: null
+      - name: vindividualcustomer
+        description: ''
+        tests: null
+        columns:
+          - name: addressline1
+            description: ''
+            tests: null
+          - name: addressline2
+            description: ''
+            tests: null
+          - name: addresstype
+            description: ''
+            tests: null
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: city
+            description: ''
+            tests: null
+          - name: countryregionname
+            description: ''
+            tests: null
+          - name: demographics
+            description: ''
+            tests: null
+          - name: emailaddress
+            description: ''
+            tests: null
+          - name: emailpromotion
+            description: ''
+            tests: null
+          - name: firstname
+            description: ''
+            tests: null
+          - name: lastname
+            description: ''
+            tests: null
+          - name: middlename
+            description: ''
+            tests: null
+          - name: phonenumber
+            description: ''
+            tests: null
+          - name: phonenumbertype
+            description: ''
+            tests: null
+          - name: postalcode
+            description: ''
+            tests: null
+          - name: stateprovincename
+            description: ''
+            tests: null
+          - name: suffix
+            description: ''
+            tests: null
+          - name: title
+            description: ''
+            tests: null
+      - name: vpersondemographics
+        description: ''
+        tests: null
+        columns:
+          - name: birthdate
+            description: ''
+            tests: null
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: datefirstpurchase
+            description: ''
+            tests: null
+          - name: education
+            description: ''
+            tests: null
+          - name: gender
+            description: ''
+            tests: null
+          - name: homeownerflag
+            description: ''
+            tests: null
+          - name: maritalstatus
+            description: ''
+            tests: null
+          - name: numbercarsowned
+            description: ''
+            tests: null
+          - name: numberchildrenathome
+            description: ''
+            tests: null
+          - name: occupation
+            description: ''
+            tests: null
+          - name: totalchildren
+            description: ''
+            tests: null
+          - name: totalpurchaseytd
+            description: ''
+            tests: null
+          - name: yearlyincome
+            description: ''
+            tests: null
+      - name: vsalesperson
+        description: ''
+        tests: null
+        columns:
+          - name: addressline1
+            description: ''
+            tests: null
+          - name: addressline2
+            description: ''
+            tests: null
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: city
+            description: ''
+            tests: null
+          - name: countryregionname
+            description: ''
+            tests: null
+          - name: emailaddress
+            description: ''
+            tests: null
+          - name: emailpromotion
+            description: ''
+            tests: null
+          - name: firstname
+            description: ''
+            tests: null
+          - name: jobtitle
+            description: ''
+            tests: null
+          - name: lastname
+            description: ''
+            tests: null
+          - name: middlename
+            description: ''
+            tests: null
+          - name: phonenumber
+            description: ''
+            tests: null
+          - name: phonenumbertype
+            description: ''
+            tests: null
+          - name: postalcode
+            description: ''
+            tests: null
+          - name: saleslastyear
+            description: ''
+            tests: null
+          - name: salesquota
+            description: ''
+            tests: null
+          - name: salesytd
+            description: ''
+            tests: null
+          - name: stateprovincename
+            description: ''
+            tests: null
+          - name: suffix
+            description: ''
+            tests: null
+          - name: territorygroup
+            description: ''
+            tests: null
+          - name: territoryname
+            description: ''
+            tests: null
+          - name: title
+            description: ''
+            tests: null
+      - name: vsalespersonsalesbyfiscalyears
+        description: ''
+        tests: null
+        columns:
+          - name: '2012'
+            description: ''
+            tests: null
+          - name: '2013'
+            description: ''
+            tests: null
+          - name: '2014'
+            description: ''
+            tests: null
+          - name: FullName
+            description: ''
+            tests: null
+          - name: JobTitle
+            description: ''
+            tests: null
+          - name: SalesPersonID
+            description: ''
+            tests: null
+          - name: SalesTerritory
+            description: ''
+            tests: null
+      - name: vsalespersonsalesbyfiscalyearsdata
+        description: ''
+        tests: null
+        columns:
+          - name: fiscalyear
+            description: ''
+            tests: null
+          - name: fullname
+            description: ''
+            tests: null
+          - name: jobtitle
+            description: ''
+            tests: null
+          - name: salespersonid
+            description: ''
+            tests: null
+          - name: salesterritory
+            description: ''
+            tests: null
+          - name: salestotal
+            description: ''
+            tests: null
+      - name: vstorewithaddresses
+        description: ''
+        tests: null
+        columns:
+          - name: addressline1
+            description: ''
+            tests: null
+          - name: addressline2
+            description: ''
+            tests: null
+          - name: addresstype
+            description: ''
+            tests: null
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: city
+            description: ''
+            tests: null
+          - name: countryregionname
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: postalcode
+            description: ''
+            tests: null
+          - name: stateprovincename
+            description: ''
+            tests: null
+      - name: vstorewithcontacts
+        description: ''
+        tests: null
+        columns:
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: contacttype
+            description: ''
+            tests: null
+          - name: emailaddress
+            description: ''
+            tests: null
+          - name: emailpromotion
+            description: ''
+            tests: null
+          - name: firstname
+            description: ''
+            tests: null
+          - name: lastname
+            description: ''
+            tests: null
+          - name: middlename
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: phonenumber
+            description: ''
+            tests: null
+          - name: phonenumbertype
+            description: ''
+            tests: null
+          - name: suffix
+            description: ''
+            tests: null
+          - name: title
+            description: ''
+            tests: null
+      - name: vstorewithdemographics
+        description: ''
+        tests: null
+        columns:
+          - name: AnnualRevenue
+            description: ''
+            tests: null
+          - name: AnnualSales
+            description: ''
+            tests: null
+          - name: BankName
+            description: ''
+            tests: null
+          - name: Brands
+            description: ''
+            tests: null
+          - name: BusinessType
+            description: ''
+            tests: null
+          - name: Internet
+            description: ''
+            tests: null
+          - name: NumberEmployees
+            description: ''
+            tests: null
+          - name: Specialty
+            description: ''
+            tests: null
+          - name: SquareFeet
+            description: ''
+            tests: null
+          - name: YearOpened
+            description: ''
+            tests: null
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null

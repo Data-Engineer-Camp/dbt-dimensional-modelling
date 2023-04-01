@@ -1,0 +1,406 @@
+version: 2
+sources:
+  - name: humanresources
+    tables:
+      - name: department
+        description: ''
+        tests: null
+        columns:
+          - name: departmentid
+            description: ''
+            tests: null
+          - name: groupname
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+      - name: employee
+        description: ''
+        tests: null
+        columns:
+          - name: birthdate
+            description: ''
+            tests: null
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: currentflag
+            description: ''
+            tests: null
+          - name: gender
+            description: ''
+            tests: null
+          - name: hiredate
+            description: ''
+            tests: null
+          - name: jobtitle
+            description: ''
+            tests: null
+          - name: loginid
+            description: ''
+            tests: null
+          - name: maritalstatus
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: nationalidnumber
+            description: ''
+            tests: null
+          - name: organizationnode
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: salariedflag
+            description: ''
+            tests: null
+          - name: sickleavehours
+            description: ''
+            tests: null
+          - name: vacationhours
+            description: ''
+            tests: null
+      - name: employeedepartmenthistory
+        description: ''
+        tests: null
+        columns:
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: departmentid
+            description: ''
+            tests: null
+          - name: enddate
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: shiftid
+            description: ''
+            tests: null
+          - name: startdate
+            description: ''
+            tests: null
+      - name: employeepayhistory
+        description: ''
+        tests: null
+        columns:
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: payfrequency
+            description: ''
+            tests: null
+          - name: rate
+            description: ''
+            tests: null
+          - name: ratechangedate
+            description: ''
+            tests: null
+      - name: jobcandidate
+        description: ''
+        tests: null
+        columns:
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: jobcandidateid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: resume
+            description: ''
+            tests: null
+      - name: shift
+        description: ''
+        tests: null
+        columns:
+          - name: endtime
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: shiftid
+            description: ''
+            tests: null
+          - name: starttime
+            description: ''
+            tests: null
+      - name: vemployee
+        description: ''
+        tests: null
+        columns:
+          - name: additionalcontactinfo
+            description: ''
+            tests: null
+          - name: addressline1
+            description: ''
+            tests: null
+          - name: addressline2
+            description: ''
+            tests: null
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: city
+            description: ''
+            tests: null
+          - name: countryregionname
+            description: ''
+            tests: null
+          - name: emailaddress
+            description: ''
+            tests: null
+          - name: emailpromotion
+            description: ''
+            tests: null
+          - name: firstname
+            description: ''
+            tests: null
+          - name: jobtitle
+            description: ''
+            tests: null
+          - name: lastname
+            description: ''
+            tests: null
+          - name: middlename
+            description: ''
+            tests: null
+          - name: phonenumber
+            description: ''
+            tests: null
+          - name: phonenumbertype
+            description: ''
+            tests: null
+          - name: postalcode
+            description: ''
+            tests: null
+          - name: stateprovincename
+            description: ''
+            tests: null
+          - name: suffix
+            description: ''
+            tests: null
+          - name: title
+            description: ''
+            tests: null
+      - name: vemployeedepartment
+        description: ''
+        tests: null
+        columns:
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: department
+            description: ''
+            tests: null
+          - name: firstname
+            description: ''
+            tests: null
+          - name: groupname
+            description: ''
+            tests: null
+          - name: jobtitle
+            description: ''
+            tests: null
+          - name: lastname
+            description: ''
+            tests: null
+          - name: middlename
+            description: ''
+            tests: null
+          - name: startdate
+            description: ''
+            tests: null
+          - name: suffix
+            description: ''
+            tests: null
+          - name: title
+            description: ''
+            tests: null
+      - name: vemployeedepartmenthistory
+        description: ''
+        tests: null
+        columns:
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: department
+            description: ''
+            tests: null
+          - name: enddate
+            description: ''
+            tests: null
+          - name: firstname
+            description: ''
+            tests: null
+          - name: groupname
+            description: ''
+            tests: null
+          - name: lastname
+            description: ''
+            tests: null
+          - name: middlename
+            description: ''
+            tests: null
+          - name: shift
+            description: ''
+            tests: null
+          - name: startdate
+            description: ''
+            tests: null
+          - name: suffix
+            description: ''
+            tests: null
+          - name: title
+            description: ''
+            tests: null
+      - name: vjobcandidate
+        description: ''
+        tests: null
+        columns:
+          - name: Addr.Loc.City
+            description: ''
+            tests: null
+          - name: Addr.Loc.CountryRegion
+            description: ''
+            tests: null
+          - name: Addr.Loc.State
+            description: ''
+            tests: null
+          - name: Addr.PostalCode
+            description: ''
+            tests: null
+          - name: Addr.Type
+            description: ''
+            tests: null
+          - name: EMail
+            description: ''
+            tests: null
+          - name: Name.First
+            description: ''
+            tests: null
+          - name: Name.Last
+            description: ''
+            tests: null
+          - name: Name.Middle
+            description: ''
+            tests: null
+          - name: Name.Prefix
+            description: ''
+            tests: null
+          - name: Name.Suffix
+            description: ''
+            tests: null
+          - name: Skills
+            description: ''
+            tests: null
+          - name: WebSite
+            description: ''
+            tests: null
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: jobcandidateid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+      - name: vjobcandidateeducation
+        description: ''
+        tests: null
+        columns:
+          - name: Edu.Degree
+            description: ''
+            tests: null
+          - name: Edu.EndDate
+            description: ''
+            tests: null
+          - name: Edu.GPA
+            description: ''
+            tests: null
+          - name: Edu.GPAScale
+            description: ''
+            tests: null
+          - name: Edu.Level
+            description: ''
+            tests: null
+          - name: Edu.Loc.City
+            description: ''
+            tests: null
+          - name: Edu.Loc.CountryRegion
+            description: ''
+            tests: null
+          - name: Edu.Loc.State
+            description: ''
+            tests: null
+          - name: Edu.Major
+            description: ''
+            tests: null
+          - name: Edu.Minor
+            description: ''
+            tests: null
+          - name: Edu.School
+            description: ''
+            tests: null
+          - name: Edu.StartDate
+            description: ''
+            tests: null
+          - name: jobcandidateid
+            description: ''
+            tests: null
+      - name: vjobcandidateemployment
+        description: ''
+        tests: null
+        columns:
+          - name: Emp.EndDate
+            description: ''
+            tests: null
+          - name: Emp.FunctionCategory
+            description: ''
+            tests: null
+          - name: Emp.IndustryCategory
+            description: ''
+            tests: null
+          - name: Emp.JobTitle
+            description: ''
+            tests: null
+          - name: Emp.Loc.City
+            description: ''
+            tests: null
+          - name: Emp.Loc.CountryRegion
+            description: ''
+            tests: null
+          - name: Emp.Loc.State
+            description: ''
+            tests: null
+          - name: Emp.OrgName
+            description: ''
+            tests: null
+          - name: Emp.Responsibility
+            description: ''
+            tests: null
+          - name: Emp.StartDate
+            description: ''
+            tests: null
+          - name: jobcandidateid
+            description: ''
+            tests: null

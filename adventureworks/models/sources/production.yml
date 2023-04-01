@@ -1,0 +1,721 @@
+version: 2
+sources:
+  - name: production
+    tables:
+      - name: billofmaterials
+        description: ''
+        tests: null
+        columns:
+          - name: billofmaterialsid
+            description: ''
+            tests: null
+          - name: bomlevel
+            description: ''
+            tests: null
+          - name: componentid
+            description: ''
+            tests: null
+          - name: enddate
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: perassemblyqty
+            description: ''
+            tests: null
+          - name: productassemblyid
+            description: ''
+            tests: null
+          - name: startdate
+            description: ''
+            tests: null
+          - name: unitmeasurecode
+            description: ''
+            tests: null
+      - name: culture
+        description: ''
+        tests: null
+        columns:
+          - name: cultureid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+      - name: document
+        description: ''
+        tests: null
+        columns:
+          - name: changenumber
+            description: ''
+            tests: null
+          - name: document
+            description: ''
+            tests: null
+          - name: documentnode
+            description: ''
+            tests: null
+          - name: documentsummary
+            description: ''
+            tests: null
+          - name: fileextension
+            description: ''
+            tests: null
+          - name: filename
+            description: ''
+            tests: null
+          - name: folderflag
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: owner
+            description: ''
+            tests: null
+          - name: revision
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: status
+            description: ''
+            tests: null
+          - name: title
+            description: ''
+            tests: null
+      - name: illustration
+        description: ''
+        tests: null
+        columns:
+          - name: diagram
+            description: ''
+            tests: null
+          - name: illustrationid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+      - name: location
+        description: ''
+        tests: null
+        columns:
+          - name: availability
+            description: ''
+            tests: null
+          - name: costrate
+            description: ''
+            tests: null
+          - name: locationid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+      - name: product
+        description: ''
+        tests: null
+        columns:
+          - name: class
+            description: ''
+            tests: null
+          - name: color
+            description: ''
+            tests: null
+          - name: daystomanufacture
+            description: ''
+            tests: null
+          - name: discontinueddate
+            description: ''
+            tests: null
+          - name: finishedgoodsflag
+            description: ''
+            tests: null
+          - name: listprice
+            description: ''
+            tests: null
+          - name: makeflag
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: productid
+            description: ''
+            tests: null
+          - name: productline
+            description: ''
+            tests: null
+          - name: productmodelid
+            description: ''
+            tests: null
+          - name: productnumber
+            description: ''
+            tests: null
+          - name: productsubcategoryid
+            description: ''
+            tests: null
+          - name: reorderpoint
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: safetystocklevel
+            description: ''
+            tests: null
+          - name: sellenddate
+            description: ''
+            tests: null
+          - name: sellstartdate
+            description: ''
+            tests: null
+          - name: size
+            description: ''
+            tests: null
+          - name: sizeunitmeasurecode
+            description: ''
+            tests: null
+          - name: standardcost
+            description: ''
+            tests: null
+          - name: style
+            description: ''
+            tests: null
+          - name: weight
+            description: ''
+            tests: null
+          - name: weightunitmeasurecode
+            description: ''
+            tests: null
+      - name: productcategory
+        description: ''
+        tests: null
+        columns:
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: productcategoryid
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+      - name: productcosthistory
+        description: ''
+        tests: null
+        columns:
+          - name: enddate
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: productid
+            description: ''
+            tests: null
+          - name: standardcost
+            description: ''
+            tests: null
+          - name: startdate
+            description: ''
+            tests: null
+      - name: productdescription
+        description: ''
+        tests: null
+        columns:
+          - name: description
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: productdescriptionid
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+      - name: productdocument
+        description: ''
+        tests: null
+        columns:
+          - name: documentnode
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: productid
+            description: ''
+            tests: null
+      - name: productinventory
+        description: ''
+        tests: null
+        columns:
+          - name: bin
+            description: ''
+            tests: null
+          - name: locationid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: productid
+            description: ''
+            tests: null
+          - name: quantity
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: shelf
+            description: ''
+            tests: null
+      - name: productlistpricehistory
+        description: ''
+        tests: null
+        columns:
+          - name: enddate
+            description: ''
+            tests: null
+          - name: listprice
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: productid
+            description: ''
+            tests: null
+          - name: startdate
+            description: ''
+            tests: null
+      - name: productmodel
+        description: ''
+        tests: null
+        columns:
+          - name: catalogdescription
+            description: ''
+            tests: null
+          - name: instructions
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: productmodelid
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+      - name: productmodelillustration
+        description: ''
+        tests: null
+        columns:
+          - name: illustrationid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: productmodelid
+            description: ''
+            tests: null
+      - name: productmodelproductdescriptionculture
+        description: ''
+        tests: null
+        columns:
+          - name: cultureid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: productdescriptionid
+            description: ''
+            tests: null
+          - name: productmodelid
+            description: ''
+            tests: null
+      - name: productphoto
+        description: ''
+        tests: null
+        columns:
+          - name: largephoto
+            description: ''
+            tests: null
+          - name: largephotofilename
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: productphotoid
+            description: ''
+            tests: null
+          - name: thumbnailphoto
+            description: ''
+            tests: null
+          - name: thumbnailphotofilename
+            description: ''
+            tests: null
+      - name: productproductphoto
+        description: ''
+        tests: null
+        columns:
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: primary
+            description: ''
+            tests: null
+          - name: productid
+            description: ''
+            tests: null
+          - name: productphotoid
+            description: ''
+            tests: null
+      - name: productreview
+        description: ''
+        tests: null
+        columns:
+          - name: comments
+            description: ''
+            tests: null
+          - name: emailaddress
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: productid
+            description: ''
+            tests: null
+          - name: productreviewid
+            description: ''
+            tests: null
+          - name: rating
+            description: ''
+            tests: null
+          - name: reviewdate
+            description: ''
+            tests: null
+          - name: reviewername
+            description: ''
+            tests: null
+      - name: productsubcategory
+        description: ''
+        tests: null
+        columns:
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: productcategoryid
+            description: ''
+            tests: null
+          - name: productsubcategoryid
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+      - name: scrapreason
+        description: ''
+        tests: null
+        columns:
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: scrapreasonid
+            description: ''
+            tests: null
+      - name: transactionhistory
+        description: ''
+        tests: null
+        columns:
+          - name: actualcost
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: productid
+            description: ''
+            tests: null
+          - name: quantity
+            description: ''
+            tests: null
+          - name: referenceorderid
+            description: ''
+            tests: null
+          - name: referenceorderlineid
+            description: ''
+            tests: null
+          - name: transactiondate
+            description: ''
+            tests: null
+          - name: transactionid
+            description: ''
+            tests: null
+          - name: transactiontype
+            description: ''
+            tests: null
+      - name: transactionhistoryarchive
+        description: ''
+        tests: null
+        columns:
+          - name: actualcost
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: productid
+            description: ''
+            tests: null
+          - name: quantity
+            description: ''
+            tests: null
+          - name: referenceorderid
+            description: ''
+            tests: null
+          - name: referenceorderlineid
+            description: ''
+            tests: null
+          - name: transactiondate
+            description: ''
+            tests: null
+          - name: transactionid
+            description: ''
+            tests: null
+          - name: transactiontype
+            description: ''
+            tests: null
+      - name: unitmeasure
+        description: ''
+        tests: null
+        columns:
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: unitmeasurecode
+            description: ''
+            tests: null
+      - name: vproductmodelcatalogdescription
+        description: ''
+        tests: null
+        columns:
+          - name: Summary
+            description: ''
+            tests: null
+          - name: bikeframe
+            description: ''
+            tests: null
+          - name: color
+            description: ''
+            tests: null
+          - name: copyright
+            description: ''
+            tests: null
+          - name: crankset
+            description: ''
+            tests: null
+          - name: maintenancedescription
+            description: ''
+            tests: null
+          - name: manufacturer
+            description: ''
+            tests: null
+          - name: material
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: noofyears
+            description: ''
+            tests: null
+          - name: pedal
+            description: ''
+            tests: null
+          - name: pictureangle
+            description: ''
+            tests: null
+          - name: picturesize
+            description: ''
+            tests: null
+          - name: productline
+            description: ''
+            tests: null
+          - name: productmodelid
+            description: ''
+            tests: null
+          - name: productphotoid
+            description: ''
+            tests: null
+          - name: producturl
+            description: ''
+            tests: null
+          - name: riderexperience
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: saddle
+            description: ''
+            tests: null
+          - name: style
+            description: ''
+            tests: null
+          - name: warrantydescription
+            description: ''
+            tests: null
+          - name: warrantyperiod
+            description: ''
+            tests: null
+          - name: wheel
+            description: ''
+            tests: null
+      - name: vproductmodelinstructions
+        description: ''
+        tests: null
+        columns:
+          - name: LaborHours
+            description: ''
+            tests: null
+          - name: LocationID
+            description: ''
+            tests: null
+          - name: LotSize
+            description: ''
+            tests: null
+          - name: MachineHours
+            description: ''
+            tests: null
+          - name: SetupHours
+            description: ''
+            tests: null
+          - name: Step
+            description: ''
+            tests: null
+          - name: instructions
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: productmodelid
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+      - name: workorder
+        description: ''
+        tests: null
+        columns:
+          - name: duedate
+            description: ''
+            tests: null
+          - name: enddate
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: orderqty
+            description: ''
+            tests: null
+          - name: productid
+            description: ''
+            tests: null
+          - name: scrappedqty
+            description: ''
+            tests: null
+          - name: scrapreasonid
+            description: ''
+            tests: null
+          - name: startdate
+            description: ''
+            tests: null
+          - name: workorderid
+            description: ''
+            tests: null
+      - name: workorderrouting
+        description: ''
+        tests: null
+        columns:
+          - name: actualcost
+            description: ''
+            tests: null
+          - name: actualenddate
+            description: ''
+            tests: null
+          - name: actualresourcehrs
+            description: ''
+            tests: null
+          - name: actualstartdate
+            description: ''
+            tests: null
+          - name: locationid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: operationsequence
+            description: ''
+            tests: null
+          - name: plannedcost
+            description: ''
+            tests: null
+          - name: productid
+            description: ''
+            tests: null
+          - name: scheduledenddate
+            description: ''
+            tests: null
+          - name: scheduledstartdate
+            description: ''
+            tests: null
+          - name: workorderid
+            description: ''
+            tests: null

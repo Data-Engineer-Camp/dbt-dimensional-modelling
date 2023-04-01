@@ -1,0 +1,15 @@
+adventureworks:
+  target: duckdb
+  outputs:
+    duckdb:
+     type: duckdb
+     path: tmp/dbt.duckdb
+    postgres:  
+      type: postgres
+      host: localhost
+      user: postgres
+      password: postgres
+      port: 5432
+      dbname: adventureworks2
+      schema: dbo
+      threads: 4

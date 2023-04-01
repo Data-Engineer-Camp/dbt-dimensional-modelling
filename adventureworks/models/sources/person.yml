@@ -1,0 +1,321 @@
+version: 2
+sources:
+  - name: person
+    tables:
+      - name: address
+        description: ''
+        tests: null
+        columns:
+          - name: addressid
+            description: ''
+            tests: null
+          - name: addressline1
+            description: ''
+            tests: null
+          - name: addressline2
+            description: ''
+            tests: null
+          - name: city
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: postalcode
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: spatiallocation
+            description: ''
+            tests: null
+          - name: stateprovinceid
+            description: ''
+            tests: null
+      - name: addresstype
+        description: ''
+        tests: null
+        columns:
+          - name: addresstypeid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+      - name: businessentity
+        description: ''
+        tests: null
+        columns:
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+      - name: businessentityaddress
+        description: ''
+        tests: null
+        columns:
+          - name: addressid
+            description: ''
+            tests: null
+          - name: addresstypeid
+            description: ''
+            tests: null
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+      - name: businessentitycontact
+        description: ''
+        tests: null
+        columns:
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: contacttypeid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: personid
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+      - name: contacttype
+        description: ''
+        tests: null
+        columns:
+          - name: contacttypeid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+      - name: countryregion
+        description: ''
+        tests: null
+        columns:
+          - name: countryregioncode
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+      - name: emailaddress
+        description: ''
+        tests: null
+        columns:
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: emailaddress
+            description: ''
+            tests: null
+          - name: emailaddressid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+      - name: password
+        description: ''
+        tests: null
+        columns:
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: passwordhash
+            description: ''
+            tests: null
+          - name: passwordsalt
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+      - name: person
+        description: ''
+        tests: null
+        columns:
+          - name: additionalcontactinfo
+            description: ''
+            tests: null
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: demographics
+            description: ''
+            tests: null
+          - name: emailpromotion
+            description: ''
+            tests: null
+          - name: firstname
+            description: ''
+            tests: null
+          - name: lastname
+            description: ''
+            tests: null
+          - name: middlename
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: namestyle
+            description: ''
+            tests: null
+          - name: persontype
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: suffix
+            description: ''
+            tests: null
+          - name: title
+            description: ''
+            tests: null
+      - name: personphone
+        description: ''
+        tests: null
+        columns:
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: phonenumber
+            description: ''
+            tests: null
+          - name: phonenumbertypeid
+            description: ''
+            tests: null
+      - name: phonenumbertype
+        description: ''
+        tests: null
+        columns:
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: phonenumbertypeid
+            description: ''
+            tests: null
+      - name: stateprovince
+        description: ''
+        tests: null
+        columns:
+          - name: countryregioncode
+            description: ''
+            tests: null
+          - name: isonlystateprovinceflag
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: name
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: stateprovincecode
+            description: ''
+            tests: null
+          - name: stateprovinceid
+            description: ''
+            tests: null
+          - name: territoryid
+            description: ''
+            tests: null
+      - name: vadditionalcontactinfo
+        description: ''
+        tests: null
+        columns:
+          - name: businessentityid
+            description: ''
+            tests: null
+          - name: city
+            description: ''
+            tests: null
+          - name: countryregion
+            description: ''
+            tests: null
+          - name: emailaddress
+            description: ''
+            tests: null
+          - name: emailspecialinstructions
+            description: ''
+            tests: null
+          - name: emailtelephonenumber
+            description: ''
+            tests: null
+          - name: firstname
+            description: ''
+            tests: null
+          - name: homeaddressspecialinstructions
+            description: ''
+            tests: null
+          - name: lastname
+            description: ''
+            tests: null
+          - name: middlename
+            description: ''
+            tests: null
+          - name: modifieddate
+            description: ''
+            tests: null
+          - name: postalcode
+            description: ''
+            tests: null
+          - name: rowguid
+            description: ''
+            tests: null
+          - name: stateprovince
+            description: ''
+            tests: null
+          - name: street
+            description: ''
+            tests: null
+          - name: telephonenumber
+            description: ''
+            tests: null
+          - name: telephonespecialinstructions
+            description: ''
+            tests: null

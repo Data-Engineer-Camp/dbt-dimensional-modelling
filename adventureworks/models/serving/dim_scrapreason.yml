@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_scrapreason
+    columns:
+      - name: scrapreason_key 
+        description: The surrogate key of scrapreason
+        tests:
+          - not_null
+          - unique
+      - name: scrapreasonid 
+        description: The natural key of scrapreason
+        tests:
+          - not_null
+          - unique
+      - name: name 
+        description: The scrap reason name
+        tests:
+          - not_null 

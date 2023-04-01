@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: fct_workorder
+    columns:
+      - name: workorder_key
+        description: The surrogate key of fct work order 
+        tests:
+          - unique
+          - not_null
+      
+      - name: workorderid
+        description: The natural key of work order 
+        test: 
+          - not null 
+      
+      - name: product_key
+        description: The surrogate key of product
+        tests:
+          - not_null
+      

@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_date
+    columns:
+      - name: date_key
+        description: The surrogate key of the date table 
+        tests:
+          - unique
+          - not_null
+
+      - name: date_day
+        description: The natural key of the date table 
+        tests:
+          - not_null
+          - unique

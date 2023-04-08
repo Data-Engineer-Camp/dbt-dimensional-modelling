@@ -1,0 +1,16 @@
+version: 2 
+
+seeds: 
+  - name: date
+    config: 
+      schema: date
+      column_types: 
+        date_day: date
+        prior_date_day: date
+        next_date_day: date
+        prior_year_date_day: date
+        prior_year_over_year_date_day: date
+        day_of_week: integer
+        day_of_week_name: varchar
+        day_of_month: integer
+        day_of_year: integer

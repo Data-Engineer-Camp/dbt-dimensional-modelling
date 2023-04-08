@@ -1,0 +1,11 @@
+version: 2 
+
+seeds: 
+  - name: store
+    config: 
+      schema: sales
+      column_types: 
+        businessentityid: integer
+        storename: varchar
+        salespersonid: integer
+        modifieddate: timestamp

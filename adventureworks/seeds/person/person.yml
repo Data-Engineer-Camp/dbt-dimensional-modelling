@@ -1,0 +1,17 @@
+version: 2 
+
+seeds: 
+  - name: person
+    config: 
+      schema: person
+      column_types: 
+        businessentityid: integer
+        title: varchar
+        firstname: varchar
+        middlename: varchar 
+        lastname: varchar
+        namestyle: boolean
+        suffix: varchar
+        modifieddate: timestamp
+        rowguid: varchar
+        emailpromotion: integer

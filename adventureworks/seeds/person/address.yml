@@ -1,0 +1,17 @@
+version: 2 
+
+seeds: 
+  - name: address
+    config: 
+      schema: person
+      column_types: 
+        addressid: integer
+        stateprovinceid: integer
+        city: varchar
+        addressline2: varchar 
+        modifieddate: timestamp
+        rowguid: varchar
+        postalcode: varchar
+        spatiallocation: varchar
+        addressline1: varchar
+

@@ -3,13 +3,14 @@ adventureworks:
   outputs:
     duckdb:
      type: duckdb
-     path: tmp/dbt.duckdb
+     path: tmp/adventureworks.duckdb
+     threads: 12
     postgres:  
       type: postgres
       host: localhost
       user: postgres
       password: postgres
       port: 5432
-      dbname: adventureworks2
+      dbname: adventureworks
       schema: dbo
       threads: 4

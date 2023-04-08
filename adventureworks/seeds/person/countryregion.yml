@@ -1,0 +1,10 @@
+version: 2 
+
+seeds: 
+  - name: countryregion
+    config: 
+      schema: person
+      column_types: 
+        countryregioncode: varchar
+        modifieddate: timestamp
+        name: varchar

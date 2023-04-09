@@ -13,4 +13,4 @@ adventureworks:
       port: 5432
       dbname: adventureworks
       schema: dbo
-      threads: 4
+      threads: 12

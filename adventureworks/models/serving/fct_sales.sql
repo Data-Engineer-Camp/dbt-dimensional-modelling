@@ -34,7 +34,7 @@ with stg_salesorderheader as (
         , stg_salesorderdetail.orderqty
         , stg_salesorderdetail.revenue_wo_taxandfreight
     from stg_salesorderdetail
-    left join stg_salesorderheader on stg_salesorderdetail.salesorderid = stg_salesorderheader.salesorderid
+    inner join stg_salesorderheader on stg_salesorderdetail.salesorderid = stg_salesorderheader.salesorderid
 )
 
 select *

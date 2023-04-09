@@ -76,3 +76,9 @@ Run logs:
 06:25:11  Completed successfully
 ```
 
+## Source schema 
+
+The source schema for Adventure Works OLTP is modelled using a 3rd normal form (3NF) modelling approach. 
+
+![](docs/source-schema.png)
+

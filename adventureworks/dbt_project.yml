@@ -26,10 +26,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   adventureworks:
-    staging:
-      date:
-        +materialized: table
-        +schema: date
     serving:
       +materialized: table
       +schema: serving

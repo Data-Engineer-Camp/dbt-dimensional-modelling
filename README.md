@@ -1,6 +1,24 @@
 # dbt dimensional modelling
 
+In this project, we extract data from a fictitious online store called AdventureWorks and load it to a data warehouse to support Business Intelligence (BI) use-cases. 
+
+We mock the extraction and loading process using [dbt seeds](https://docs.getdbt.com/docs/build/seeds). The seed data produces the source schema in the data warehouse. 
+
+We then create dbt models to perform model the data to be used for BI. 
+
 ![](docs/architecture.png)
+
+## Source schema 
+
+The source schema for Adventure Works OLTP is modelled using a 3rd normal form (3NF) modelling approach. 
+
+![](docs/source-schema.png)
+
+## Target schema 
+
+The target schema modelling using Kimball's dimensional modelling approach. 
+
+![](docs/target-schema.png)
 
 ## Getting started 
 
@@ -75,10 +93,3 @@ Run logs:
 06:25:11  
 06:25:11  Completed successfully
 ```
-
-## Source schema 
-
-The source schema for Adventure Works OLTP is modelled using a 3rd normal form (3NF) modelling approach. 
-
-![](docs/source-schema.png)
-

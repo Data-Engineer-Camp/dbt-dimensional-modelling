@@ -1,0 +1,4 @@
+# ignore dbt_packages folder 
+*dbt_packages/
+*target/
+*macros/

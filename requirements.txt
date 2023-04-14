@@ -1,0 +1,5 @@
+dbt-core==1.4.5
+dbt-postgres==1.4.5
+dbt-duckdb==1.4.1
+sqlfluff==2.0.4
+sqlfluff-templater-dbt==2.0.4

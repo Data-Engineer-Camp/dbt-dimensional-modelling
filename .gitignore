@@ -1,3 +1,6 @@
+# macos files
+.DS_Store
+
 # temp files
 tmp
 

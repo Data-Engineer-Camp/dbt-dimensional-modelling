@@ -1,0 +1,12 @@
+[sqlfluff]
+templater = dbt
+dialect = duckdb
+exclude_rules = L016,L028,L027
+
+[sqlfluff:templater:dbt]
+project_dir = adventureworks
+profiles_dir = adventureworks
+target = duckdb
+
+[sqlfluff:templater:jinja]
+apply_dbt_builtins = True

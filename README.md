@@ -53,7 +53,14 @@ adventureworks:
 ```
 
 
-After configuring `profiles.yml`, you can deploy the dbt assets to the database by running the following command:
+Install dbt dependencies: 
+
+```
+dbt deps 
+```
+
+
+After that, you can deploy the dbt assets to the database by running the following command:
 
 ```
 dbt build 

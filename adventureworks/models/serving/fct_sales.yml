@@ -33,7 +33,7 @@ models:
       - name: ship_address_key
         description: The foreign key of the shipping address
         tests:
-          - not_null       
+          - not_null
       
       - name: creditcard_key
         description: The foreign key of the creditcard. If no creditcard exists, it was assumed that purchase was made in cash.
@@ -60,6 +60,6 @@ models:
         tests:
           - not_null
 
-      - name: revenue_wo_taxandfreight
+      - name: revenue
         description: The revenue obtained by multiplying unitprice and orderqty 
 

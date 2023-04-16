@@ -16,27 +16,22 @@ stg_salesorderdetail as (
         productid,
         orderqty,
         unitprice,
-        unitprice * orderqty as revenue_wo_taxandfreight
+        unitprice * orderqty as revenue
     from {{ ref('salesorderdetail') }}
-),
-
-final as (
-    select
-        {{ dbt_utils.surrogate_key(['stg_salesorderdetail.salesorderid', 'salesorderdetailid']) }} as sales_key,
-        {{ dbt_utils.surrogate_key(['productid']) }} as product_key,
-        {{ dbt_utils.surrogate_key(['customerid']) }} as customer_key,
-        {{ dbt_utils.surrogate_key(['creditcardid']) }} as creditcard_key,
-        {{ dbt_utils.surrogate_key(['shiptoaddressid']) }} as ship_address_key,
-        {{ dbt_utils.surrogate_key(['order_status']) }} as order_status_key,
-        {{ dbt_utils.surrogate_key(['orderdate']) }} as order_date_key,
-        stg_salesorderdetail.salesorderid,
-        stg_salesorderdetail.salesorderdetailid,
-        stg_salesorderdetail.unitprice,
-        stg_salesorderdetail.orderqty,
-        stg_salesorderdetail.revenue_wo_taxandfreight
-    from stg_salesorderdetail
-    inner join stg_salesorderheader on stg_salesorderdetail.salesorderid = stg_salesorderheader.salesorderid
 )
 
-select *
-from final
+select
+    {{ dbt_utils.surrogate_key(['stg_salesorderdetail.salesorderid', 'salesorderdetailid']) }} as sales_key,
+    {{ dbt_utils.surrogate_key(['productid']) }} as product_key,
+    {{ dbt_utils.surrogate_key(['customerid']) }} as customer_key,
+    {{ dbt_utils.surrogate_key(['creditcardid']) }} as creditcard_key,
+    {{ dbt_utils.surrogate_key(['shiptoaddressid']) }} as ship_address_key,
+    {{ dbt_utils.surrogate_key(['order_status']) }} as order_status_key,
+    {{ dbt_utils.surrogate_key(['orderdate']) }} as order_date_key,
+    stg_salesorderdetail.salesorderid,
+    stg_salesorderdetail.salesorderdetailid,
+    stg_salesorderdetail.unitprice,
+    stg_salesorderdetail.orderqty,
+    stg_salesorderdetail.revenue
+from stg_salesorderdetail
+inner join stg_salesorderheader on stg_salesorderdetail.salesorderid = stg_salesorderheader.salesorderid

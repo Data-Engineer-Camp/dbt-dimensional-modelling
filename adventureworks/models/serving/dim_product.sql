@@ -14,7 +14,7 @@ stg_product_category as (
 )
 
 select
-    {{ dbt_utils.surrogate_key(['stg_product.productid']) }} as product_key, 
+    {{ dbt_utils.surrogate_key(['stg_product.productid']) }} as product_key,
     stg_product.productid,
     stg_product.name as product_name,
     stg_product.productnumber,

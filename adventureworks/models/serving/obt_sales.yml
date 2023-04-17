@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: obt_sales
+    columns:
+
+      - name: sales_key
+        description: The surrogate key of the fct sales
+        tests:
+          - not_null
+          - unique
+
+      - name: salesorderid
+        description: The natural key of the saleorderheader
+        tests:
+          - not_null
+
+      - name: salesorderdetailid
+        description: The natural key of the salesorderdetail
+        tests:
+          - not_null
+
+      - name: unitprice
+        description: The unit price of the product 
+        tests:
+          - not_null
+
+      - name: orderqty
+        description: The quantity of the product 
+        tests:
+          - not_null
+
+      - name: revenue
+        description: The revenue obtained by multiplying unitprice and orderqty 

@@ -3,7 +3,7 @@ adventureworks:
   outputs:
     duckdb:
      type: duckdb
-     path: tmp/adventureworks.duckdb
+     path: target/adventureworks.duckdb
      threads: 12
     postgres:  
       type: postgres

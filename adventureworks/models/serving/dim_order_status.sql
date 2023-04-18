@@ -5,7 +5,7 @@ with stg_order_status as (
 )
 
 select
-    {{ dbt_utils.surrogate_key(['stg_order_status.order_status']) }} as order_status_key,
+    {{ dbt_utils.generate_surrogate_key(['stg_order_status.order_status']) }} as order_status_key,
     order_status,
     case
         when order_status = 1 then 'in_process'

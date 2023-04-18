@@ -21,7 +21,7 @@ stg_store as (
 )
 
 select
-    {{ dbt_utils.surrogate_key(['stg_customer.customerid']) }} as customer_key,
+    {{ dbt_utils.generate_surrogate_key(['stg_customer.customerid']) }} as customer_key,
     stg_customer.customerid,
     stg_person.businessentityid,
     stg_person.fullname,

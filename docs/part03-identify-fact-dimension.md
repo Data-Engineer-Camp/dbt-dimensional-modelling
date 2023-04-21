@@ -10,13 +10,11 @@ Based on the information provided from the earlier part, we want to create a dim
 
 ### Fact tables
 
-:::info
 [Fact tables](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/facts-for-measurement/) are database tables that represent a business process in the real world. Each record in the fact table represents a business event such as a: 
 
 - Item sale
 - Website click
 - Production work order
-:::
 
 There are two tables in the sales schema that catch our attention. These two tables can be used to create the fact table for the sales process: 
 

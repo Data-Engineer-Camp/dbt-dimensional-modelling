@@ -9,4 +9,4 @@ Let’s make it easier for consumers of our dimensional model to understand the 
 
 The ERD will enable consumers of our dimensional model to quickly identify the keys and relationship type (one-to-one, one-to-many) that need to be used to join tables. 
 
-[&laquo; Previous](part05-create-fact.md) [Next &raquo;](part04-create-dimension.md)
+[&laquo; Previous](part05-create-fact.md) [Next &raquo;](part07-consume-model.md)

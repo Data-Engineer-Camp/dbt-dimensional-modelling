@@ -175,4 +175,4 @@ dbt run && dbt test
 
 Great work, you have successfully created your very first fact and dimension tables! Our dimensional model is now complete!! 🎉  
 
-[&laquo; Previous](part04-create-dimension.md) [Next &raquo;](part04-create-dimension.md)
+[&laquo; Previous](part04-create-dimension.md) [Next &raquo;](part06-document-model.md)

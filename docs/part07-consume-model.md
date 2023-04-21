@@ -89,3 +89,4 @@ If you have any questions about the material, please reach out to me on dbt slac
 
 *Author's note: The materials in this article were created by [Data Engineer Camp](https://dataengineercamp.com/), a 16-week data engineering bootcamp for professionals looking to transition to data engineering and analytics engineering. The article was written by Jonathan Neo, with editorial and technical guidance from [Kenny Ning](https://www.linkedin.com/in/kenny-ning/) and editorial review from [Paul Hallaste](https://www.linkedin.com/in/paulhallaste/).*
 
+[&laquo; Previous](part07-consume-model.md)

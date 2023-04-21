@@ -25,7 +25,7 @@ There are two tables in the sales schema that catch our attention. These two tab
 
 *Sales Order Header and Detail*
 
-Let’s define a fact table called `fct_sales` which joins `sales.salesorderheader` and `sales.salesorderdetail` together. Each record in the fact table (or the grain of the fact table) is an order detail. 
+Let’s define a fact table called `fct_sales` which joins `sales.salesorderheader` and `sales.salesorderdetail` together. Each record in the fact table (also known as the [grain](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/grain/)) is an order detail.
 
 ![](img/fct_sales.png)
 
@@ -65,7 +65,9 @@ Instead, we can denormalize the dimension tables by performing joins.
 
 This is known as a star schema and this approach reduces the amount of joins that need to be performed by the consumer of the dimensional model. 
 
-Using the star schema approach, we can identify 6 dimensions that will help us answer the business questions: 
+Using the star schema approach, we can identify 6 dimensions as shown below that will help us answer the business questions:
+
+![](img/dimension-tables.png)
 
 - `dim_product` : a dimension table that joins `product`, `productsubcategory`, `productcategory`
 - `dim_address` : a dimension table that joins `address`, `stateprovince`, `countryregion`
@@ -76,7 +78,6 @@ Using the star schema approach, we can identify 6 dimensions that will help us a
 
 *Note: We have manually seeded the `dim_date` table since DuckDB is not supported by the dbt_date package.*
 
-![](img/dimension-tables.png)
 
 *Dimension tables*
 

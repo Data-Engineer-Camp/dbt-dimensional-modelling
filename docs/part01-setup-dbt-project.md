@@ -1,6 +1,6 @@
 ## Part 1: Setup dbt project and database
 
-### Step 1: Install project dependencies
+### Step 1: Before you get started
 
 Before you can get started: 
 
@@ -9,6 +9,8 @@ Before you can get started:
     - Download [PostgreSQL](https://www.postgresql.org/download/)
 - You must have Python 3.8 or above installed
 - You must have dbt version 1.3.0 or above installed
+- You should have a basic understanding of [SQL](https://www.sqltutorial.org/)
+- You should have a basic understanding of [dbt](https://docs.getdbt.com/docs/quickstarts/overview)
 
 ### Step 2: Clone the repository
 
@@ -39,7 +41,7 @@ The dbt profile (see `adventureworks/profiles.yml`) has already been pre-configu
 
 ```yaml
 adventureworks:
-  target: duckdb # default to duckdb 
+  target: duckdb # leave this as duckdb (default), or change this to your chosen database
 
   # supported databases: duckdb, postgres 
   outputs:
@@ -95,7 +97,7 @@ Examine the database source schema below, paying close attention to:
 
 ### Step 8: Query the tables
 
-Get a better sense of what the records look like by executing select statements against the database tables. 
+Get a better sense of what the records look like by executing select statements using your database's SQL editor.
 
 For example:  
 

@@ -2,7 +2,7 @@
 
 # dbt dimensional modelling
 
-Welcome to the tutorial on dimensional modelling with dbt. 
+Welcome to the tutorial on dimensional modelling with dbt by [Data Engineer Camp](https://dataengineercamp.com/).
 
 ## Table of Contents 
 

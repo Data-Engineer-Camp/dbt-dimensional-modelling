@@ -5,6 +5,7 @@ Now that you’ve set up the dbt project, database, and have taken a peek at the
 Identifying the business process is done in collaboration with the business user. The business user has context around the business objectives and business processes, and can provide you with that information. 
 
 ![](img/conversation.png)
+
 *Conversation between business user and analytics engineer*
 
 Upon speaking with the CEO of AdventureWorks, you learn the following information: 

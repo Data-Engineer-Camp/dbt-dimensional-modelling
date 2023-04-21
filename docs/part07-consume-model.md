@@ -72,6 +72,7 @@ Using `dbt_utils.star()`, we select all columns except the surrogate key columns
 We can then build the OBT by running `dbt run`. Your dbt DAG should now look like this: 
 
 ![](img/dbt-dag.png)
+
 *Final dbt DAG*
 
 Congratulations, you have reached the end of this tutorial. If you want to learn more, please see the learning resources below on dimensional modelling. 

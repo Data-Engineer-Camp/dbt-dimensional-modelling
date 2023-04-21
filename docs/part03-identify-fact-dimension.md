@@ -22,11 +22,13 @@ There are two tables in the sales schema that catch our attention. These two tab
 - The `sales.salesorderdetail` table contains information about the product that was ordered, and the order quantity and unit price, which we can use to calculate the revenue. Each record in this table represents a single order detail.
 
 ![](img/sales-order-header-detail.png)
+
 *Sales Order Header and Detail*
 
 Let’s define a fact table called `fct_sales` which joins `sales.salesorderheader` and `sales.salesorderdetail` together. Each record in the fact table (or the grain of the fact table) is an order detail. 
 
 ![](img/fct_sales.png)
+
 *fct_sales table*
 
 ### Dimension tables
@@ -50,6 +52,7 @@ Based on the business questions that our business user would like answered, we c
 There are different ways we could create the dimension tables. We could use the existing relationships between the tables as depicted in the diagram below. 
 
 ![](img/snowflake-schema.png)
+
 *Snowflake schema*
 
 This is known as a snowflake schema design, where the fact table is the centre of the snowflake, and there are many fractals branching off the centre of the snowflake. However, this results in many joins that need to be performed by the consumer of the dimensional model. 
@@ -57,6 +60,7 @@ This is known as a snowflake schema design, where the fact table is the centre o
 Instead, we can denormalize the dimension tables by performing joins. 
 
 ![](img/star-schema.png)
+
 *Star schema*
 
 This is known as a star schema and this approach reduces the amount of joins that need to be performed by the consumer of the dimensional model. 

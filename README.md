@@ -33,6 +33,7 @@ Dimensional modelling is a technique introduced by Ralph Kimball in 1996 with hi
 The goal of dimensional modelling is to take raw data and transform it into Fact and Dimension tables that represent the business. 
 
 ![](docs/img/3nf-to-dimensional-model.png)
+
 *Raw 3NF data to dimensional model*
 
 The benefits of dimensional modelling are: 

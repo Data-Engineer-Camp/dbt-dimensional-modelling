@@ -90,6 +90,7 @@ Examine the database source schema below, paying close attention to:
 - Relationships
 
 ![](img/source-schema.png)
+
 *Source schema*
 
 ### Step 8: Query the tables

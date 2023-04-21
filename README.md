@@ -1,6 +1,6 @@
 <img src="docs/img/logo.png" align="right" />
 
-# dbt dimensional modelling
+# dbt dimensional modelling tutorial
 
 Welcome to the tutorial on building a Kimball dimensional model with dbt. 
 

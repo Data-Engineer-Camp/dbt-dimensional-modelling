@@ -2,7 +2,9 @@
 
 # dbt dimensional modelling
 
-Welcome to the tutorial on dimensional modelling with dbt by [Data Engineer Camp](https://dataengineercamp.com/).
+Welcome to the tutorial on building a Kimball dimensional model with dbt. 
+
+The tutorial is also featured on the [dbt developer blog](https://docs.getdbt.com/blog/kimball-dimensional-model).
 
 ## Table of Contents 
 

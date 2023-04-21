@@ -77,6 +77,7 @@ Using the star schema approach, we can identify 6 dimensions that will help us a
 *Note: We have manually seeded the `dim_date` table since DuckDB is not supported by the dbt_date package.*
 
 ![](img/dimension-tables.png)
+
 *Dimension tables*
 
 In the next part, we use dbt to create the fact and dimension tables we have identified. 

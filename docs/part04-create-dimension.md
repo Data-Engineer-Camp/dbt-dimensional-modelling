@@ -39,7 +39,7 @@ stg_product_category as (
 ... 
 ```
 
-We use the `ref` function to reference the upstream tables and create a Directed Acyclic Graph (DAG) of the dependencies. 
+We use the `ref` function to reference the upstream tables and create a [Directed Acyclic Graph (DAG)](https://docs.getdbt.com/terms/dag) of the dependencies. 
 
 ### Step 3: Perform the joins
 

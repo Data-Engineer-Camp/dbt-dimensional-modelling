@@ -21,17 +21,13 @@ There are two tables in the sales schema that catch our attention. These two tab
 - The `sales.salesorderheader` table contains information about the credit card used in the order, the shipping address, and the customer. Each record in this table represents an order header that contains one or more order details.
 - The `sales.salesorderdetail` table contains information about the product that was ordered, and the order quantity and unit price, which we can use to calculate the revenue. Each record in this table represents a single order detail.
 
-<p>
-    <img src="img/sales-order-header-detail.png" alt>
-    <em>Sales Order Header and Detail</em>
-</p>
+![](img/sales-order-header-detail.png)
+*Sales Order Header and Detail*
 
 Let’s define a fact table called `fct_sales` which joins `sales.salesorderheader` and `sales.salesorderdetail` together. Each record in the fact table (or the grain of the fact table) is an order detail. 
 
-<p>
-    <img src="img/fct_sales.png" alt>
-    <em>fct_sales table</em>
-</p>
+![](img/fct_sales.png)
+*fct_sales table*
 
 ### Dimension tables
 
@@ -53,20 +49,15 @@ Based on the business questions that our business user would like answered, we c
 
 There are different ways we could create the dimension tables. We could use the existing relationships between the tables as depicted in the diagram below. 
 
-<p>
-    <img src="img/snowflake-schema.png" alt>
-    <em>Snowflake schema</em>
-</p>
-
+![](img/snowflake-schema.png)
+*Snowflake schema*
 
 This is known as a snowflake schema design, where the fact table is the centre of the snowflake, and there are many fractals branching off the centre of the snowflake. However, this results in many joins that need to be performed by the consumer of the dimensional model. 
 
 Instead, we can denormalize the dimension tables by performing joins. 
 
-<p>
-    <img src="img/star-schema.png" alt>
-    <em>Star schema</em>
-</p>
+![](img/star-schema.png)
+*Star schema*
 
 This is known as a star schema and this approach reduces the amount of joins that need to be performed by the consumer of the dimensional model. 
 
@@ -81,10 +72,8 @@ Using the star schema approach, we can identify 6 dimensions that will help us a
 
 *Note: We have manually seeded the `dim_date` table since DuckDB is not supported by the dbt_date package.*
 
-<p>
-    <img src="img/dimension-tables.png" alt>
-    <em>Dimension tables</em>
-</p>
+![](img/dimension-tables.png)
+*Dimension tables*
 
 In the next part, we use dbt to create the fact and dimension tables we have identified. 
 

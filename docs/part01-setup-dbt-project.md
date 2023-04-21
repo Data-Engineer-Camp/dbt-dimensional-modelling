@@ -89,11 +89,8 @@ Examine the database source schema below, paying close attention to:
 - Keys
 - Relationships
 
-<p>
-    <img src="img/source-schema.png" alt>
-    <em>Source schema</em>
-</p>
-
+![](img/source-schema.png)
+*Source schema*
 
 ### Step 8: Query the tables
 

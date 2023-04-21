@@ -1,28 +1,30 @@
+<img src="docs/img/logo.png" align="right" />
+
 # dbt dimensional modelling
+
+Welcome to the tutorial on dimensional modelling with dbt. 
+
+## Table of Contents 
+
+- [Part 0: Understand dimensional modelling concepts](#dimensional-modelling)
+- [Part 1: Set up a mock dbt project and database](docs/part01-setup-dbt-project.md)
+- [Part 2: Identify the business process to model](docs/part02-identify-business-process.md)
+- [Part 3: Identify the fact and dimension tables](docs/part03-identify-fact-dimension.md)
+- [Part 4: Create the dimension tables](docs/part04-create-dimension.md)
+- [Part 5: Create the fact table](docs/part05-create-fact.md)
+- [Part 6: Document the dimensional model relationships](docs/part06-document-model.md)
+- [Part 7: Consume the dimensional model](docs/part07-consume-model.md)
+
+## Introduction
 
 Dimensional modelling is one of many data modelling techniques that are used by data practitioners to organize and present data for analytics. Other data modelling techniques include Data Vault (DV), Third Normal Form (3NF), and One Big Table (OBT) to name a few.
 
-<p>
-    <img src="docs/img/data-modelling.png" alt>
-    <em>Data modelling techniques on a normalization vs denormalization scale</em>
-</p>
+![](docs/img/data-modelling.png)
+*Data modelling techniques on a normalization vs denormalization scale*
 
 While the relevancy of dimensional modelling [has been debated by data practitioners](https://discourse.getdbt.com/t/is-kimball-dimensional-modeling-still-relevant-in-a-modern-data-warehouse/225/6), it is still one of the most widely adopted data modelling technique for analytics. 
 
 Despite its popularity, resources on how to create dimensional models using dbt remain scarce and lack detail. This tutorial aims to solve this by providing the definitive guide to dimensional modelling with dbt. 
-
-By the end of this tutorial, you will: 
-
-- [Understand dimensional modelling concepts](#dimensional-modelling)
-- Set up a mock dbt project and database
-- Identify the business process to model
-- Identify the fact and dimension tables
-- Create the dimension tables
-- Create the fact table
-- Document the dimensional model relationships
-- Consume the dimensional model
-
----
 
 ## Dimensional modelling
 
@@ -30,10 +32,8 @@ Dimensional modelling is a technique introduced by Ralph Kimball in 1996 with hi
 
 The goal of dimensional modelling is to take raw data and transform it into Fact and Dimension tables that represent the business. 
 
-<p>
-    <img src="docs/img/3nf-to-dimensional-model.png" alt>
-    <em>Raw 3NF data to dimensional model</em>
-</p>
+![](docs/img/3nf-to-dimensional-model.png)
+*Raw 3NF data to dimensional model*
 
 The benefits of dimensional modelling are: 
 

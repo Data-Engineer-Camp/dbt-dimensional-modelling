@@ -133,3 +133,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Evidence
+adventureworks/reports/.evidence/template
+adventureworks/reports/.vscode
+adventureworks/reports/node_modules

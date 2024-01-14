@@ -1,0 +1,28 @@
+version: "3.7"
+
+networks:
+  dagster_network: 
+    name: dagster_network
+
+services:
+  warehouse_db:
+    image: postgres:alpine
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: adventureworks
+    restart: always
+    ports:
+      - "5432:5432"
+    networks:
+      - dagster_network
+
+  metabase:
+    container_name: metabase
+    image: metabase/metabase
+    ports:
+      - "3002:3000"
+    restart: unless-stopped
+    networks:
+      - dagster_network

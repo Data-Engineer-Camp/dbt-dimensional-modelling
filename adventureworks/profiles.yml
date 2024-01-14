@@ -1,10 +1,10 @@
 adventureworks:
-  target: duckdb
+  target: postgres
   outputs:
-    duckdb:
-     type: duckdb
-     path: target/adventureworks.duckdb
-     threads: 12
+  #   # duckdb:
+  #   #  type: duckdb
+  #   #  path: target/adventureworks.duckdb
+  #   #  threads: 12
     postgres:  
       type: postgres
       host: localhost

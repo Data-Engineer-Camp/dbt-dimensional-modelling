@@ -7,5 +7,5 @@ seeds:
       schema: sales
       column_types: 
         salesorderid: integer
-        modifieddate: timestamp
+        modifieddate: datetime
         salesreasonid: integer

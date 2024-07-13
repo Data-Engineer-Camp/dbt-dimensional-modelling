@@ -9,9 +9,9 @@ seeds:
         salesorderid: integer
         orderqty: smallint
         salesorderdetailid: integer
-        unitprice: numeric
+        unitprice: numeric(18, 2)
         specialofferid: integer
-        modifieddate: timestamp
-        rowguid: varchar
+        modifieddate: datetime
+        rowguid: varchar(255)
         productid: integer
-        unitpricediscount: numeric
+        unitpricediscount: numeric(18, 2)

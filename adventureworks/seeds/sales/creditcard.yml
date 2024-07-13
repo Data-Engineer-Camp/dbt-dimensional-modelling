@@ -6,9 +6,9 @@ seeds:
       schema: sales
       column_types: 
         creditcardid: integer
-        cardtype: varchar
+        cardtype: varchar(255)
         expyear: smallint
-        modifieddate: timestamptz
+        modifieddate: datetime
         expmonth: smallint
-        cardnumber: varchar
+        cardnumber: varchar(255)
 

@@ -14,7 +14,7 @@ stg_countryregion as (
 )
 
 select
-    {{ dbt_utils.generate_surrogate_key(['stg_address.addressid']) }} as address_key,
+    {{ tsql_utils.sqlserver__generate_surrogate_key(['stg_address.addressid']) }} as address_key,
     stg_address.addressid,
     stg_address.city as city_name,
     stg_stateprovince.name as state_name,

@@ -504,7 +504,7 @@ businessentityid,storename,salespersonid,modifieddate
 1296,Trailblazing Sports,281,2014-09-12 11:15:07.497
 1298,Racing Partners,282,2014-09-12 11:15:07.497
 1300,Perfect Toys,290,2014-09-12 11:15:07.497
-1302,Exhibition Showroom,289,2014-09-12 11:15:07.497
+1302,Exhivarchar(255)ion Showroom,289,2014-09-12 11:15:07.497
 1304,Authorized Bike Sales and Rental,280,2014-09-12 11:15:07.497
 1306,Two-Seater Bikes,277,2014-09-12 11:15:07.497
 1308,More Bikes!,276,2014-09-12 11:15:07.497

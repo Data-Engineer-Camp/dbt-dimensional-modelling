@@ -6,6 +6,6 @@ seeds:
       schema: sales
       column_types: 
         businessentityid: integer
-        storename: varchar
+        storename: varchar(255)
         salespersonid: integer
-        modifieddate: timestamp
+        modifieddate: datetime

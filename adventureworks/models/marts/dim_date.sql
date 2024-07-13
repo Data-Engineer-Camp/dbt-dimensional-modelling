@@ -3,6 +3,6 @@ with stg_date as (
 )
 
 select
-    {{ dbt_utils.generate_surrogate_key(['stg_date.date_day']) }} as date_key,
+    {{ tsql_utils.sqlserver__generate_surrogate_key(['stg_date.date_day']) }} as date_key,
     *
 from stg_date

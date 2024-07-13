@@ -6,22 +6,22 @@ seeds:
       schema: production
       column_types: 
         productid: integer
-        name: varchar
+        name: varchar(255)
         safetystocklevel: smallint
-        finishedgoodsflag: boolean 
-        class: varchar
-        makeflag: boolean
-        productnumber: varchar
+        finishedgoodsflag: varchar(255) 
+        class: varchar(255)
+        makeflag: varchar(255)
+        productnumber: varchar(255)
         reorderpoint: smallint
-        modifieddate: timestamp
-        rowguid: varchar
+        modifieddate: datetime
+        rowguid: varchar(255)
         productmodelid: integer
-        weightunitmeasurecode: varchar
-        standardcost: numeric
+        weightunitmeasurecode: varchar(255)
+        standardcost: float
         productsubcategoryid: integer
-        listprice: numeric
+        listprice: float
         daystomanufacture: integer
-        productline: varchar
-        color: varchar
-        sellstartdate: timestamp
-        weight: numeric
+        productline: varchar(255)
+        color: varchar(255)
+        sellstartdate: datetime
+        weight: float

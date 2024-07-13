@@ -9,23 +9,23 @@ seeds:
         salesorderid: integer
         shipmethodid: integer
         billtoaddressid: integer
-        modifieddate: timestamp
-        rowguid: varchar
-        taxamt: numeric
+        modifieddate: datetime
+        rowguid: varchar(255)
+        taxamt: numeric(18, 2)
         shiptoaddressid: integer
-        onlineorderflag: boolean
+        onlineorderflag: varchar(255)
         territoryid: integer
         status: smallint
-        orderdate: timestamp
-        creditcardapprovalcode: varchar
-        subtotal: numeric
+        orderdate: datetime
+        creditcardapprovalcode: varchar(255)
+        subtotal: numeric(18, 2)
         creditcardid: integer
         currencyrateid: integer
         revisionnumber: smallint
-        freight: numeric
-        duedate: timestamp
-        totaldue: numeric
+        freight: numeric(18, 4)
+        duedate: datetime
+        totaldue: numeric(18, 2)
         customerid: integer
         salespersonid: integer
-        shipdate: timestamp
-        accountnumber: varchar
+        shipdate: datetime
+        accountnumber: varchar(255)

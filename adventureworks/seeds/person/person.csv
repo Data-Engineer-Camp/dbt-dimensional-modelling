@@ -1391,11 +1391,11 @@ businessentityid,title,firstname,middlename,lastname,persontype,namestyle,suffix
 10298,,Jay,W,Sanchez,IN,f,,2011-07-18 00:00:00,f37d496b-4711-46fb-9285-cc04aaddb2b3,0
 10324,,Jay,,Moyer,IN,f,,2011-11-14 00:00:00,204f61d4-6c3f-418b-9f24-bc533cc65da9,0
 10348,,Amber,,Baker,IN,f,,2011-10-30 00:00:00,b70226f1-5d63-4719-80fa-03e4c9839b4c,0
-10375,,Tabitha,E,Arthur,IN,f,,2011-06-13 00:00:00,7c9823b2-5d0a-4499-b7c6-701bf8c40128,1
-10386,,Tabitha,W,Sara,IN,f,,2011-12-28 00:00:00,610851c4-f5c5-42fd-af92-3f02fa48456a,0
+10375,,Tavarchar(255)ha,E,Arthur,IN,f,,2011-06-13 00:00:00,7c9823b2-5d0a-4499-b7c6-701bf8c40128,1
+10386,,Tavarchar(255)ha,W,Sara,IN,f,,2011-12-28 00:00:00,610851c4-f5c5-42fd-af92-3f02fa48456a,0
 10389,,Katherine,,Gonzalez,IN,f,,2011-10-23 00:00:00,af219825-30ed-4d27-9cbe-e32c23036f99,0
-10390,,Tabitha,C,Subram,IN,f,,2011-09-07 00:00:00,abf5e13c-4de6-4fbd-8a8e-21a976aa7e76,0
-10415,,Tabitha,L,Gomez,IN,f,,2011-07-29 00:00:00,932b333e-5f89-4fda-bb92-1bcc2f5018a3,0
+10390,,Tavarchar(255)ha,C,Subram,IN,f,,2011-09-07 00:00:00,abf5e13c-4de6-4fbd-8a8e-21a976aa7e76,0
+10415,,Tavarchar(255)ha,L,Gomez,IN,f,,2011-07-29 00:00:00,932b333e-5f89-4fda-bb92-1bcc2f5018a3,0
 10429,,Natalie,L,Hernandez,IN,f,,2011-07-06 00:00:00,b35b102e-e955-436e-b147-28cff4f700e0,0
 10445,,Maria,,Hernandez,IN,f,,2011-12-13 00:00:00,57cbc19a-ab3a-4a43-a1fb-256ce405780c,0
 10473,,Kari,S,Kim,IN,f,,2011-11-06 00:00:00,49a3d6d8-f373-4c90-a9fe-d18d1256449c,0

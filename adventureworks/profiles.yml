@@ -1,16 +1,25 @@
-adventureworks:
-  target: duckdb
-  outputs:
-    duckdb:
-     type: duckdb
-     path: target/adventureworks.duckdb
-     threads: 12
-    postgres:  
-      type: postgres
-      host: localhost
-      user: postgres
-      password: postgres
-      port: 5432
-      dbname: adventureworks
-      schema: dbo
-      threads: 12
+  adventureworks:
+    target: dbt-demo
+    outputs:
+      dbt-demo:
+        type: sqlserver # or synapse or whatever you want
+        driver: "ODBC Driver 17 for SQL Server"
+        server: demo-database.database.windows.net
+        schema: dbo   #
+        database: dbt-db #"{{ env_var('DB') }}"
+        authentication: ActiveDirectoryInteractive
+        user: # evn variable
+        port: 1433
+        encrypt: true # adds "Encrypt=Yes" to connection string
+        trust_cert: false
+
+
+
+    # default:
+    #   type: sqlserver # or synapse or whatever you want
+    #   driver: "ODBC Driver 17 for SQL Server"
+    #   schema: "{{ env_var('SCHEMA') }}"
+    #   host: "{{ env_var('HOST') }}"
+    #   database: "{{ env_var('DB') }}"
+    #   authentication: CLI
+    #   port: 1433

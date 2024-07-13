@@ -7,5 +7,5 @@ seeds:
       column_types: 
         productsubcategoryid: integer
         productcategoryid: integer
-        name: varchar
-        modifieddate: timestamp
+        name: varchar(255)
+        modifieddate: datetime

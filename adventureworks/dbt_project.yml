@@ -19,6 +19,16 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
+dispatch:
+  - macro_namespace: dbt_utils
+    search_order: ['tsql_utils', 'dbt_utils']
+  - macro_namespace: dbt_date
+    search_order: ['tsql_utils', 'dbt_date']
+  - macro_namespace: dbt_expectations
+    search_order: ['tsql_utils', 'dbt_expectations']
+  - macro_namespace: audit_helper
+    search_order: ['tsql_utils', 'audit_helper']
+
 target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"

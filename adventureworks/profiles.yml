@@ -4,11 +4,10 @@
       dbt-demo:
         type: sqlserver # or synapse or whatever you want
         driver: "ODBC Driver 17 for SQL Server"
-        server: demo-database.database.windows.net
-        schema: dbo   #
-        database: dbt-db #"{{ env_var('DB') }}"
-        authentication: ActiveDirectoryInteractive
-        user: # evn variable
+        server: "{{ env_var('SERVER') }}" 
+        schema: "{{ env_var('SCHEMA') }}"
+        database: "{{ env_var('DB') }}"
+        authentication: CLI 
         port: 1433
         encrypt: true # adds "Encrypt=Yes" to connection string
         trust_cert: false

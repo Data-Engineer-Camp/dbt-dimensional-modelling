@@ -37,7 +37,7 @@ models:
       
       - name: creditcard_key
         description: The foreign key of the creditcard. If no creditcard exists, it was assumed that purchase was made in cash.
-        test:
+        tests:
           - not_null
 
       - name: order_date_key

@@ -1,0 +1,21 @@
+SELECT 
+    salesorderid as sales_order_id, 
+    shipmethodid as ship_method_id, 
+    billtoaddressid as billing_address_id, 
+    taxamt as tax, 
+    shiptoaddressid as shipping_address_id, 
+    onlineorderflag as is_online_order, 
+    territoryid as territory_id, 
+    status as order_status_code, 
+    orderdate as order_placed_timestamp, 
+    subtotal as bill_amount, 
+    creditcardid as credit_card_id, 
+    currencyrateid as currency_rate_id, 
+    freight as shipping_cost, 
+    duedate as order_due_date_timestamp, 
+    totaldue as total_bill_amount, 
+    customerid as customer_id, 
+    salespersonid as sales_person_id, 
+    shipdate as order_shipped_timestamp, 
+    accountnumber as customer_account_number
+FROM sales.salesorderheader

@@ -1,0 +1,88 @@
+models:
+  - name: stg_sales__salesorderheader
+    description: "Staging model for sales order headers. One row per sales order containing order level details."
+    columns:
+      - name: sales_order_id
+        data_type: integer
+        description: "Primary key. Unique identifier for each sales order."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: ship_method_id
+        data_type: integer
+        description: "Reference to the shipping method used for this order."
+
+      - name: billing_address_id
+        data_type: integer
+        description: "Reference to the address used for billing."
+
+      - name: tax
+        data_type: decimal(18,3)
+        description: "Tax amount charged on the order."
+
+      - name: shipping_address_id
+        data_type: integer
+        description: "Reference to the address the order was shipped to."
+
+      - name: is_online_order
+        data_type: boolean
+        description: "True if the order was placed online. False if placed through a sales person."
+
+      - name: territory_id
+        data_type: integer
+        description: "Reference to the sales territory where the order was placed."
+
+      - name: order_status_code
+        data_type: smallint
+        description: "Numeric code representing the current status of the order."
+
+      - name: order_date
+        data_type: date
+        description: "Date the order was placed."
+
+      - name: bill_amount
+        data_type: decimal(18,3)
+        description: "Total amount billed for the order before tax and shipping."
+
+      - name: credit_card_id
+        data_type: integer
+        description: "Foreign key to creditcard. The credit card used to pay for this order."
+        data_tests:
+          - not_null:
+              config:
+                severity: warn
+
+      - name: currency_rate_id
+        data_type: integer
+        description: "Reference to the currency exchange rate applied to this order."
+
+      - name: shipping_cost
+        data_type: decimal(18,3)
+        description: "Cost of shipping for this order."
+
+      - name: order_due_date
+        data_type: date
+        description: "Date the order is due to be delivered."
+
+      - name: total_bill_amount
+        data_type: decimal(18,3)
+        description: "Total amount due including tax and shipping."
+
+      - name: customer_id
+        data_type: integer
+        description: "Foreign key to customer. The customer who placed this order."
+        data_tests:
+          - not_null
+
+      - name: sales_person_id
+        data_type: integer
+        description: "Reference to the sales person who handled this order. NULL for online orders."
+
+      - name: order_shipped_date
+        data_type: date
+        description: "Date the order was physically shipped."
+
+      - name: customer_account_number
+        data_type: varchar
+        description: "Account number assigned to the customer for this order."

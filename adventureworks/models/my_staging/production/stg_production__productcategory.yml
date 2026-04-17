@@ -1,0 +1,14 @@
+models:
+  - name: stg_production__productcategory
+    description: "Staging model for top level product groupings such as Bikes, Clothing and Accessories."
+    columns:
+      - name: product_category_id
+        data_type: integer
+        description: "Primary key. Unique identifier for each product category."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: product_classification
+        data_type: varchar
+        description: "Name of the product category."

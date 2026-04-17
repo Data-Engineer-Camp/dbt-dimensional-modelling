@@ -1,0 +1,14 @@
+models:
+  - name: stg_person__countryregion
+    description: "Staging model for country and region reference data."
+    columns:
+      - name: country_code
+        data_type: varchar
+        description: "Primary key. ISO standard code identifying each country or region, e.g. AU, US."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: country_name
+        data_type: varchar
+        description: "Full name of the country or region."

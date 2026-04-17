@@ -1,0 +1,170 @@
+models:
+  - name: my_obt_sales
+    description: "One big table for sales reporting. Flat denormalised table joining all dims to the sales fact. Intended for BI tools that cannot handle multi-table joins."
+    columns:
+      - name: sales_key
+        data_type: varchar
+        description: "Surrogate primary key. Hashed from sales_order_id and sales_order_detail_id."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: sales_order_id
+        data_type: integer
+        description: "The order this line item belongs to."
+
+      - name: sales_order_detail_id
+        data_type: integer
+        description: "The unique identifier for this line item within the order."
+
+      - name: order_status_code
+        data_type: smallint
+        description: "Numeric code representing the status of the order."
+
+      - name: sale_price
+        data_type: decimal(18,3)
+        description: "Actual unit price the product was sold at for this line item."
+
+      - name: order_quantity
+        data_type: smallint
+        description: "Number of units ordered for this line item."
+
+      - name: revenue
+        data_type: decimal(18,3)
+        description: "Total revenue for this line item. Calculated as sale_price multiplied by order_quantity."
+
+      - name: product_id
+        data_type: integer
+        description: "Natural key for the product sold on this line item."
+
+      - name: product_name
+        data_type: varchar
+        description: "Full name of the product."
+
+      - name: product_code
+        data_type: varchar
+        description: "Short alphanumeric code identifying the product."
+
+      - name: product_classification
+        data_type: varchar
+        description: "Top level product category name, e.g. Bikes."
+
+      - name: product_type
+        data_type: varchar
+        description: "Product subcategory name, e.g. Road Bikes."
+
+      - name: product_quality
+        data_type: varchar
+        description: "Quality or finish classification of the product."
+
+      - name: product_line
+        data_type: varchar
+        description: "Product line classification, e.g. R for Road, M for Mountain."
+
+      - name: product_color
+        data_type: varchar
+        description: "Color of the product."
+
+      - name: product_weight
+        data_type: decimal(18,3)
+        description: "Weight of the product."
+
+      - name: weight_unit
+        data_type: varchar
+        description: "Unit of measurement for product weight, e.g. LB or G."
+
+      - name: is_product_for_sale
+        data_type: boolean
+        description: "True if the product is available for sale to customers."
+
+      - name: is_product_made_inhouse
+        data_type: boolean
+        description: "True if the product is manufactured in-house. False if purchased from a vendor."
+
+      - name: manufacturing_time
+        data_type: integer
+        description: "Number of days required to manufacture the product."
+
+      - name: product_manufacturing_cost
+        data_type: decimal(18,3)
+        description: "Standard cost to manufacture or procure the product."
+
+      - name: retail_price
+        data_type: decimal(18,3)
+        description: "Recommended retail price of the product."
+
+      - name: product_first_available_date
+        data_type: date
+        description: "Date the product was first made available for sale."
+
+      - name: customer_id
+        data_type: integer
+        description: "Natural key for the customer who placed this order."
+
+      - name: territory_id
+        data_type: integer
+        description: "Sales territory the customer belongs to."
+
+      - name: customer_name
+        data_type: varchar
+        description: "Full name of the customer. Populated for individual customers."
+
+      - name: store_name
+        data_type: varchar
+        description: "Trading name of the store. Populated for store customers."
+
+      - name: sales_person_id
+        data_type: integer
+        description: "Sales person assigned to this store account. NULL for individual customers and online orders."
+
+      - name: address_id
+        data_type: integer
+        description: "Natural key for the shipping address on this order."
+
+      - name: city
+        data_type: varchar
+        description: "City of the shipping address."
+
+      - name: postcode
+        data_type: varchar
+        description: "Postal code of the shipping address."
+
+      - name: state_name
+        data_type: varchar
+        description: "State or province of the shipping address."
+
+      - name: country_name
+        data_type: varchar
+        description: "Country of the shipping address."
+
+      - name: previous_day_date
+        data_type: date
+        description: "The calendar date before the order date."
+
+      - name: the_day_after_date
+        data_type: date
+        description: "The calendar date after the order date."
+
+      - name: previous_year_date
+        data_type: date
+        description: "The same date one year prior to the order date."
+
+      - name: previous_year_week_day_date
+        data_type: date
+        description: "The same weekday from the equivalent week in the previous year."
+
+      - name: day_of_week
+        data_type: integer
+        description: "Numeric day of the week for the order date."
+
+      - name: day_of_week_name
+        data_type: varchar
+        description: "Full name of the day of the week for the order date."
+
+      - name: day_of_month
+        data_type: integer
+        description: "Numeric day within the month for the order date."
+
+      - name: day_of_year
+        data_type: integer
+        description: "Numeric day within the year for the order date."

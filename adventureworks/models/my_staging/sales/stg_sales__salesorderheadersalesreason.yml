@@ -1,0 +1,15 @@
+models:
+  - name: stg_sales__salesorderheadersalesreason
+    description: "Staging model for the junction table linking sales orders to their sales reasons. One order can have multiple reasons."
+    columns:
+      - name: sales_order_id
+        data_type: integer
+        description: "Foreign key to salesorderheader. Not unique as one order can have multiple reasons."
+        data_tests:
+          - not_null
+
+      - name: sales_reason_id
+        data_type: integer
+        description: "Foreign key to salesreason. Not unique as one reason can apply to many orders."
+        data_tests:
+          - not_null

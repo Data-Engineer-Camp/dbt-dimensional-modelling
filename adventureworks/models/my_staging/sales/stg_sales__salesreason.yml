@@ -1,0 +1,18 @@
+models:
+  - name: stg_sales__salesreason
+    description: "Staging model for sales reason reference data. One row per reason type."
+    columns:
+      - name: sales_reason_id
+        data_type: integer
+        description: "Primary key. Unique identifier for each sales reason."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: purchase_reason
+        data_type: varchar
+        description: "Name of the sales reason, e.g. Price, Quality, Promotion."
+
+      - name: purchase_reason_type
+        data_type: varchar
+        description: "Category grouping for the sales reason, e.g. Other, Marketing."

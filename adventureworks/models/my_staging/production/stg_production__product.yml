@@ -1,0 +1,74 @@
+models:
+  - name: stg_production__product
+    description: "Staging model for the product catalogue. One row per sellable product."
+    columns:
+      - name: product_id
+        data_type: integer
+        description: "Primary key. Unique identifier for each product."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: product_name
+        data_type: varchar
+        description: "Full name of the product."
+
+      - name: is_product_for_sale
+        data_type: boolean
+        description: "True if the product is available for sale to customers."
+
+      - name: product_quality
+        data_type: varchar
+        description: "Quality or finish classification of the product."
+
+      - name: is_product_made_inhouse
+        data_type: boolean
+        description: "True if the product is manufactured in-house. False if purchased from a vendor."
+
+      - name: product_code
+        data_type: varchar
+        description: "Short alphanumeric code used to identify the product internally."
+
+      - name: product_model_id
+        data_type: integer
+        description: "Reference to the product model this product belongs to."
+
+      - name: weight_unit
+        data_type: varchar
+        description: "Unit of measurement for product weight, e.g. LB or G."
+
+      - name: product_manufacturing_cost
+        data_type: decimal(18,3)
+        description: "Standard cost to manufacture or procure the product."
+
+      - name: product_subcategory_id
+        data_type: integer
+        description: "Foreign key to productsubcategory. The subcategory this product belongs to."
+        data_tests:
+          - not_null:
+              config:
+                severity: warn
+
+      - name: retail_price
+        data_type: decimal(18,3)
+        description: "Recommended retail price of the product."
+
+      - name: manufacturing_time
+        data_type: integer
+        description: "Number of days required to manufacture the product."
+
+      - name: product_line
+        data_type: varchar
+        description: "Product line classification, e.g. R for Road, M for Mountain."
+
+      - name: product_color
+        data_type: varchar
+        description: "Color of the product."
+
+      - name: product_first_available_date
+        data_type: date
+        description: "Date the product was first made available for sale."
+
+      - name: product_weight
+        data_type: decimal(18,3)
+        description: "Weight of the product in the unit specified by weight_unit."

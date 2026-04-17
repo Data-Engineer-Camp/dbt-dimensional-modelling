@@ -1,0 +1,35 @@
+models:
+  - name: my_dim_customer
+    description: "Customer dimension. One row per customer. A customer can be an individual person or a store."
+    columns:
+      - name: customer_key
+        data_type: varchar
+        description: "Surrogate primary key. Hashed from customer_id."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        data_type: integer
+        description: "Natural key. The original customer identifier from the source system."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: territory_id
+        data_type: integer
+        description: "Foreign key reference to the sales territory the customer belongs to."
+        data_tests:
+          - not_null
+
+      - name: customer_name
+        data_type: varchar
+        description: "Full name of the customer. Populated for individual customers, NULL for store customers."
+
+      - name: store_name
+        data_type: varchar
+        description: "Trading name of the store. Populated for store customers, NULL for individual customers."
+
+      - name: sales_person_id
+        data_type: integer
+        description: "Reference to the sales person assigned to this store account. NULL for individual customers."

@@ -1,0 +1,42 @@
+models:
+  - name: my_dim_date
+    description: "Date dimension. One row per calendar date with derived time attributes for reporting."
+    columns:
+      - name: date_id
+        data_type: date
+        description: "Primary key. The calendar date. One unique row per day."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: previous_day_date
+        data_type: date
+        description: "The calendar date of the previous day."
+
+      - name: the_day_after_date
+        data_type: date
+        description: "The calendar date of the following day."
+
+      - name: previous_year_date
+        data_type: date
+        description: "The same date one year prior. Used for year-on-year comparisons."
+
+      - name: previous_year_week_day_date
+        data_type: date
+        description: "The same weekday from the equivalent week in the previous year."
+
+      - name: day_of_week
+        data_type: integer
+        description: "Numeric day of the week starting from 1."
+
+      - name: day_of_week_name
+        data_type: varchar
+        description: "Full name of the day of the week, e.g. Monday."
+
+      - name: day_of_month
+        data_type: integer
+        description: "Numeric day within the month, 1 through 31."
+
+      - name: day_of_year
+        data_type: integer
+        description: "Numeric day within the year, 1 through 366."

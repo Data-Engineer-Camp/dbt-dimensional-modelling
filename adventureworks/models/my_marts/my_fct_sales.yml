@@ -1,0 +1,83 @@
+models:
+  - name: my_fct_sales
+    description: "Sales fact table. One row per order line item. Grain is sales_order_id + sales_order_detail_id."
+    columns:
+      - name: sales_key
+        data_type: varchar
+        description: "Surrogate primary key. Hashed from sales_order_id and sales_order_detail_id."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: product_key
+        data_type: varchar
+        description: "Foreign key to my_dim_product."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('my_dim_product')
+                field: product_key
+
+      - name: customer_key
+        data_type: varchar
+        description: "Foreign key to my_dim_customer."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('my_dim_customer')
+                field: customer_key
+
+      - name: address_key
+        data_type: varchar
+        description: "Foreign key to my_dim_address. Set to warn severity due to 69 confirmed orphaned rows in source data."
+        data_tests:
+          - not_null:
+              config:
+                severity: warn
+                warn_if: ">0"
+          - relationships:
+              arguments:
+                to: ref('my_dim_address')
+                field: address_key
+              config:
+                severity: warn
+
+      - name: order_date_id
+        data_type: date
+        description: "Foreign key to my_dim_date. The date the order was placed."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('my_dim_date')
+                field: date_id
+
+      - name: sales_order_id
+        data_type: integer
+        description: "Natural key component. The order this line item belongs to."
+        data_tests:
+          - not_null
+
+      - name: sales_order_detail_id
+        data_type: integer
+        description: "Natural key component. The unique identifier for this line item within the order."
+        data_tests:
+          - not_null
+
+      - name: order_status_code
+        data_type: smallint
+        description: "Numeric code representing the status of the order at time of processing."
+
+      - name: sale_price
+        data_type: decimal(18,3)
+        description: "Actual unit price the product was sold at for this line item."
+
+      - name: order_quantity
+        data_type: smallint
+        description: "Number of units ordered for this line item."
+
+      - name: revenue
+        data_type: decimal(18,3)
+        description: "Total revenue for this line item. Calculated as sale_price multiplied by order_quantity."

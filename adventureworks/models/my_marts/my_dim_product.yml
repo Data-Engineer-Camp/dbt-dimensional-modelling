@@ -1,0 +1,71 @@
+models:
+  - name: my_dim_product
+    description: "Product dimension. One row per product enriched with subcategory and category details."
+    columns:
+      - name: product_key
+        data_type: varchar
+        description: "Surrogate primary key. Hashed from product_id."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: product_id
+        data_type: integer
+        description: "Natural key. The original product identifier from the source system."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: product_name
+        data_type: varchar
+        description: "Full name of the product."
+
+      - name: product_code
+        data_type: varchar
+        description: "Short alphanumeric code used to identify the product internally."
+
+      - name: product_classification
+        data_type: varchar
+        description: "Top level product category name, e.g. Bikes, Clothing, Accessories."
+
+      - name: product_type
+        data_type: varchar
+        description: "Product subcategory name nested under the classification, e.g. Road Bikes, Jerseys."
+
+      - name: product_quality
+        data_type: varchar
+        description: "Quality or finish classification of the product."
+
+      - name: product_line
+        data_type: varchar
+        description: "Product line classification, e.g. R for Road, M for Mountain."
+
+      - name: product_color
+        data_type: varchar
+        description: "Color of the product."
+
+      - name: product_weight
+        data_type: decimal(18,3)
+        description: "Weight of the product in the unit specified by weight_unit."
+
+      - name: weight_unit
+        data_type: varchar
+        description: "Unit of measurement for product weight, e.g. LB or G."
+
+      - name: is_product_for_sale
+        data_type: boolean
+        description: "True if the product is available for sale to customers."
+
+      - name: is_product_made_inhouse
+        data_type: boolean
+        description: "True if the product is manufactured in-house. False if purchased from a vendor."
+
+      - name: manufacturing_time
+        data_type: integer
+        description: "Number of days required to manufacture the product."
+
+      - name: product_manufacturing_cost
+        data_type: decimal(18,3)
+        description: "Standard cost to manufacture or procure the product."
+
+      - name: retai

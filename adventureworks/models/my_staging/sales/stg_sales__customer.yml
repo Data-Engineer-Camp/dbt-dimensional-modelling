@@ -1,0 +1,23 @@
+models:
+  - name: stg_sales__customer
+    description: "Staging model for customers. A customer can be an individual person or a store."
+    columns:
+      - name: customer_id
+        data_type: integer
+        description: "Primary key. Unique identifier for each customer."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: person_id
+        data_type: integer
+        description: "Foreign key to person. Populated when the customer is an individual. NULL when the customer is a store."
+
+      - name: store_id
+        data_type: integer
+        description: "Foreign key to store. Populated when the customer is a store. NULL when the customer is an individual."
+
+      - name: territory_id
+        data_type: integer
+        description: "Reference to the sales territory the customer belongs to."
+        

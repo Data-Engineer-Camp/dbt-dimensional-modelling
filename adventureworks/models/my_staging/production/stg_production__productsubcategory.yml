@@ -1,0 +1,20 @@
+models:
+  - name: stg_production__productsubcategory
+    description: "Staging model for second level product groupings nested under product categories."
+    columns:
+      - name: product_subcategory_id
+        data_type: integer
+        description: "Primary key. Unique identifier for each product subcategory."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: product_category_id
+        data_type: integer
+        description: "Foreign key to productcategory. The top level category this subcategory belongs to."
+        data_tests:
+          - not_null
+
+      - name: product_type
+        data_type: varchar
+        description: "Name of the product subcategory."

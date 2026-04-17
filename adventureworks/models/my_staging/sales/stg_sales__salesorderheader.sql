@@ -1,0 +1,21 @@
+SELECT 
+    salesorderid as sales_order_id, 
+    shipmethodid as ship_method_id, 
+    billtoaddressid as billing_address_id, 
+    taxamt as tax, 
+    shiptoaddressid as shipping_address_id, 
+    onlineorderflag as is_online_order, 
+    territoryid as territory_id, 
+    status as order_status_code, 
+    cast(orderdate as date) as order_date, 
+    subtotal as bill_amount, 
+    creditcardid as credit_card_id, 
+    currencyrateid as currency_rate_id, 
+    freight as shipping_cost, 
+    cast(duedate as date) as order_due_date, 
+    totaldue as total_bill_amount, 
+    customerid as customer_id, 
+    salespersonid as sales_person_id, 
+    cast(shipdate as date) as order_shipped_date, 
+    accountnumber as customer_account_number
+FROM {{ source('sales', 'salesorderheader') }}

@@ -1,0 +1,33 @@
+models:
+  - name: my_dim_address
+    description: "Address dimension. One row per unique address enriched with state and country details."
+    columns:
+      - name: address_key
+        data_type: varchar
+        description: "Surrogate primary key. Hashed from address_id."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: address_id
+        data_type: integer
+        description: "Natural key. The original address identifier from the source system."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: city
+        data_type: varchar
+        description: "City name for this address."
+
+      - name: postcode
+        data_type: varchar
+        description: "Postal code for this address."
+
+      - name: state_name
+        data_type: varchar
+        description: "Full name of the state or province this address belongs to."
+
+      - name: country_name
+        data_type: varchar
+        description: "Full name of the country this address belongs to."

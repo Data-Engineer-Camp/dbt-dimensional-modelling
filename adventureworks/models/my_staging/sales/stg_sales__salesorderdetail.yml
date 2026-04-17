@@ -1,0 +1,38 @@
+models:
+  - name: stg_sales__salesorderdetail
+    description: "Staging model for individual line items within a sales order. One row per product per order."
+    columns:
+      - name: sales_order_id
+        data_type: integer
+        description: "Foreign key to salesorderheader. Not unique as one order can have multiple line items."
+        data_tests:
+          - not_null
+
+      - name: sales_order_detail_id
+        data_type: integer
+        description: "Primary key. Unique identifier for each order line item."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: order_quantity
+        data_type: smallint
+        description: "Number of units ordered for this line item."
+
+      - name: sale_price
+        data_type: decimal(18,3)
+        description: "Actual unit price the product was sold at for this line item."
+
+      - name: promotion_id
+        data_type: integer
+        description: "Reference to any promotion applied to this line item."
+
+      - name: product_id
+        data_type: integer
+        description: "Foreign key to product. The product sold on this line item."
+        data_tests:
+          - not_null
+
+      - name: discount_in_decimal
+        data_type: decimal(18,3)
+        description: "Discount applied to this line item expressed as a decimal, e.g. 0.10 for 10 percent."

@@ -1,0 +1,165 @@
+version: 2
+
+sources:
+  - name: person
+    database: adventureworks
+    schema: person
+    description: "Contains data about individuals, addresses and geographic reference data."
+    tables:
+      - name: address
+        description: "Physical addresses for customers, employees and vendors."
+        columns:
+          - name: addressid
+            description: "Primary key. Unique identifier for each address."
+            data_tests:
+              - unique
+              - not_null
+
+      - name: countryregion
+        description: "Reference table of country and region codes."
+        columns:
+          - name: countryregioncode
+            description: "Primary key. ISO standard code identifying each country or region."
+            data_tests:
+              - unique
+              - not_null
+
+      - name: person
+        description: "Core table storing individual people including customers, employees and contacts."
+        columns:
+          - name: businessentityid
+            description: "Primary key. Links to the shared BusinessEntity table as the root identity for all persons."
+            data_tests:
+              - unique
+              - not_null
+
+      - name: stateprovince
+        description: "Reference table of states and provinces linked to countries and regions."
+        columns:
+          - name: stateprovinceid
+            description: "Primary key. Unique identifier for each state or province."
+            data_tests:
+              - unique
+              - not_null
+
+  - name: production
+    database: adventureworks
+    schema: production
+    description: "Contains product catalogue data including products, categories and subcategories."
+    tables:
+      - name: product
+        description: "Master product table. One row per sellable product."
+        columns:
+          - name: productid
+            description: "Primary key. Unique identifier for each product."
+            data_tests:
+              - unique
+              - not_null
+
+      - name: productcategory
+        description: "Top level product groupings such as Bikes, Clothing and Accessories."
+        columns:
+          - name: productcategoryid
+            description: "Primary key. Unique identifier for each product category."
+            data_tests:
+              - unique
+              - not_null
+
+      - name: productsubcategory
+        description: "Second level product groupings nested under product categories."
+        columns:
+          - name: productsubcategoryid
+            description: "Primary key. Unique identifier for each product subcategory."
+            data_tests:
+              - unique
+              - not_null
+
+  - name: sales
+    database: adventureworks
+    schema: sales
+    description: "Contains all sales transactions, customer data and supporting sales reference tables."
+    tables:
+      - name: customer
+        description: "One row per customer. A customer can be an individual person or a store."
+        columns:
+          - name: customerid
+            description: "Primary key. Unique identifier for each customer."
+            data_tests:
+              - unique
+              - not_null
+
+      - name: salesorderheader
+        description: "One row per sales order. Contains order-level details such as dates, amounts and shipping."
+        columns:
+          - name: salesorderid
+            description: "Primary key. Unique identifier for each sales order."
+            data_tests:
+              - unique
+              - not_null
+
+      - name: salesorderdetail
+        description: "One row per line item within a sales order. A single order can have multiple line items."
+        columns:
+          - name: salesorderdetailid
+            description: "Primary key. Unique identifier for each order line item."
+            data_tests:
+              - unique
+              - not_null
+
+      - name: creditcard
+        description: "Credit card records linked to sales orders."
+        columns:
+          - name: creditcardid
+            description: "Primary key. Unique identifier for each credit card record."
+            data_tests:
+              - unique
+              - not_null
+
+      - name: store
+        description: "Store accounts that purchase as business customers. One row per store."
+        columns:
+          - name: businessentityid
+            description: "Primary key. Links to the shared BusinessEntity table as the root identity for each store."
+            data_tests:
+              - unique
+              - not_null
+
+      - name: salesreason
+        description: "Reference table of reasons why a sale was made, such as Price, Quality or Promotion."
+        columns:
+          - name: salesreasonid
+            description: "Primary key. Unique identifier for each sales reason."
+            data_tests:
+              - unique
+              - not_null
+
+      - name: salesorderheadersalesreason
+        description: "Junction table linking sales orders to one or more sales reasons. One order can have multiple reasons."
+        columns:
+          - name: salesorderid
+            description: "Foreign key to salesorderheader. Not unique as one order can have multiple reasons."
+            data_tests:
+              - not_null
+          - name: salesreasonid
+            description: "Foreign key to salesreason. Not unique as one reason can apply to many orders."
+            data_tests:
+              - not_null
+        data_tests:
+          - dbt_utils.unique_combination_of_columns:
+              combination_of_columns:
+                - salesorderid
+                - salesreasonid
+
+  - name: date
+    database: adventureworks
+    schema: date
+    description: "Custom date dimension table used for time-based analysis across all fact tables."
+    tables:
+      - name: date
+        description: "One row per calendar date. Used as the primary date dimension in the dimensional model."
+        columns:
+          - name: date_day
+            description: "Primary key. The calendar date in DATE format. One unique row per day."
+            data_tests:
+              - unique
+              - not_null
